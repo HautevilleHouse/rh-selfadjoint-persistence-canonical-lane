@@ -30,16 +30,22 @@ the distribution of the nontrivial zeros of the Riemann zeta function on the cri
   - `certificate_baseline.json`
 
 - `scripts/`
+  - `extract_constants.py`
+  - `promote_constants.py`
   - `rh_closure_drift_guard.py`
   - `rh_closure_registry.py`
   - `rh_closure_target_calculator.py`
   - `extract_rh_e3_margin.py`
   - `rh_formalism_guard.py`
+  - `update_manifest.py`
   - `verify_manifest.py`
 
 - `artifacts/`
+  - `constants_extraction_inputs.json`
+  - `constants_extracted.json`
   - `constants_registry.json`
   - `stitch_constants.json`
+  - `promotion_report.json`
  
 ## Local Repro Command
 
@@ -47,17 +53,19 @@ the distribution of the nontrivial zeros of the Riemann zeta function on the cri
 bash repro/run_repro.sh
 ```
 
-This writes `repro/certificate_runtime.json`.
+This refreshes the extracted/pro promoted constants and writes `repro/certificate_runtime.json`.
 
 ## How To Read This Professionally
 
 1. Theorem chain first: read `paper/RH_SELF_ADJOINT_PERSISTENCE_PREPRINT.md`.
-2. Constants provenance second: audit `paper/EXTRACTION_SPEC.md`, `artifacts/constants_registry.json`, and `artifacts/stitch_constants.json`.
+2. Constants provenance second: audit `paper/EXTRACTION_SPEC.md`, `artifacts/constants_extraction_inputs.json`, `artifacts/constants_extracted.json`, `artifacts/constants_registry.json`, and `artifacts/stitch_constants.json`.
 3. Pipeline third: run `bash repro/run_repro.sh` to audit hashes/provenance/gates; it is reproducibility infrastructure, not theorem generation.
 
 Current RH runner policy:
 
-- `repro/run_repro.sh` writes `repro/certificate_runtime.json` and verifies `repro/repro_manifest.json` against the tracked files in the public rerun pack.
+- `repro/run_repro.sh` executes `extract -> promote -> native drift guard -> manifest verify`.
+- `repro/run_repro.sh` executes `extract -> promote -> native drift guard -> manifest refresh -> manifest verify`.
+- The RH drift guard remains the final gate evaluator; the extraction layer standardizes constants provenance without changing gate logic.
 
 ## Citation
 

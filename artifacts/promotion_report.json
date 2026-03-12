@@ -1,0 +1,21 @@
+{
+  "extracted_source": "artifacts/constants_extracted.json",
+  "framework": "rh-selfadjoint-persistence-canonical-lane",
+  "generated_utc": "2026-03-12T04:15:45Z",
+  "promoted_constants": {
+    "c_r": 9.960035360010515,
+    "delta_rec": 0.001,
+    "eps_coh": 0.0,
+    "mu_strat": 0.9669337190736997,
+    "rho_nf": 0.03430793496110181,
+    "xi_tail": 0.01408609
+  },
+  "promoted_stitch": {
+    "eta_coh_star_can": 0.0,
+    "l_d_can": 192.85454134255954,
+    "sigma_star_can": 0.00033437291061
+  },
+  "registry_path": "artifacts/constants_registry.json",
+  "schema_version": "2026-03-05",
+  "stitch_path": "artifacts/stitch_constants.json"
+}

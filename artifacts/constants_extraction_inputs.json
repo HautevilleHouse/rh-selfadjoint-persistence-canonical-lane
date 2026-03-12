@@ -1,0 +1,108 @@
+{
+  "framework": "rh-selfadjoint-persistence-canonical-lane",
+  "constants": {
+    "c_r": {
+      "status": "derived_numeric",
+      "formula": "c_r_raw",
+      "components": {
+        "c_r_raw": 9.960035360010515
+      },
+      "reference": 1.0,
+      "required_nonnegative": true,
+      "source_section": "13.53P.8 theorem extraction (canonical branch constants)",
+      "notes": "Canonical branch theorem extraction for the response constant c_r. The extraction layer preserves the native RH drift-guard value without changing gate behavior."
+    },
+    "delta_rec": {
+      "status": "derived_numeric",
+      "formula": "delta_rec_raw",
+      "components": {
+        "delta_rec_raw": 0.001
+      },
+      "reference": 1.0,
+      "required_positive": true,
+      "source_section": "13.53P.8 theorem extraction (canonical branch constants)",
+      "notes": "Canonical restart-spacing constant on the theorem lane. Promoted deterministically into the registry consumed by the RH drift guard."
+    },
+    "eps_coh": {
+      "status": "derived_numeric",
+      "formula": "eps_coh_raw",
+      "components": {
+        "eps_coh_raw": 0.0
+      },
+      "reference": 1.0,
+      "required_nonnegative": true,
+      "strict_zero": true,
+      "source_section": "13.53P.8.3 strict canonical normalization",
+      "notes": "Strict canonical coherence residual. The extraction layer enforces the exact zero condition required by the RH closure guard."
+    },
+    "mu_strat": {
+      "status": "derived_numeric",
+      "formula": "mu_strat_raw",
+      "components": {
+        "mu_strat_raw": 0.9669337190736997
+      },
+      "reference": 1.0,
+      "required_positive": true,
+      "source_section": "13.43/13.53M theorem extraction (canonical branch formulas)",
+      "notes": "Canonical strategy margin on the theorem lane. This explicit raw slot replaces the earlier manual-only registry entry while preserving the native RH value."
+    },
+    "rho_nf": {
+      "status": "derived_numeric",
+      "formula": "rho_nf_raw",
+      "components": {
+        "rho_nf_raw": 0.03430793496110181
+      },
+      "reference": 1.0,
+      "required_positive": true,
+      "source_section": "13.53P.8 theorem extraction (canonical branch constants)",
+      "notes": "Canonical no-failure radius extracted into the standard constant pipeline and consumed unchanged by the RH drift guard."
+    },
+    "xi_tail": {
+      "status": "derived_numeric",
+      "formula": "xi_tail_raw",
+      "components": {
+        "xi_tail_raw": 0.01408609
+      },
+      "reference": 1.0,
+      "required_nonnegative": true,
+      "source_section": "13.43/13.53M theorem extraction (canonical branch formulas)",
+      "notes": "Canonical tail control parameter. The extraction manifest makes the guard input explicit and auditable without changing the RH threshold test."
+    }
+  },
+  "stitch": {
+    "eta_coh_star_can": {
+      "status": "derived_numeric",
+      "formula": "eta_coh_star_can_raw",
+      "components": {
+        "eta_coh_star_can_raw": 0.0
+      },
+      "reference": 1.0,
+      "required_nonnegative": true,
+      "strict_zero": true,
+      "source_section": "13.53P.8.3 + 13.53N.2",
+      "notes": "Strict canonical coherence stitch constant on the theorem lane."
+    },
+    "l_d_can": {
+      "status": "derived_numeric",
+      "formula": "l_d_can_raw",
+      "components": {
+        "l_d_can_raw": 192.85454134255954
+      },
+      "reference": 1.0,
+      "required_positive": true,
+      "source_section": "13.47 + 13.53N.2",
+      "notes": "Canonical tube drift constant preserved through the extraction/promote path."
+    },
+    "sigma_star_can": {
+      "status": "derived_numeric",
+      "formula": "sigma_star_can_raw",
+      "components": {
+        "sigma_star_can_raw": 0.00033437291061
+      },
+      "reference": 1.0,
+      "required_positive": true,
+      "source_section": "13.47 + 13.53N.2",
+      "notes": "Canonical design reserve consumed by the manifold-constrained G_M closure mode."
+    }
+  }
+}

@@ -5,12 +5,18 @@ Provide a concrete attestation workflow for independent reruns of the canonical 
 
 ## Inputs
 - repository snapshot containing:
+  - `scripts/extract_constants.py`,
+  - `scripts/promote_constants.py`,
   - `scripts/rh_closure_drift_guard.py`,
   - `scripts/extract_rh_e3_margin.py`,
   - `scripts/rh_formalism_guard.py`,
+  - `scripts/update_manifest.py`,
   - `scripts/verify_manifest.py`,
+  - `artifacts/constants_extraction_inputs.json`,
+  - `artifacts/constants_extracted.json`,
   - `artifacts/constants_registry.json`,
   - `artifacts/stitch_constants.json`,
+  - `artifacts/promotion_report.json`,
   - `repro/repro_manifest.json`,
   - `repro/certificate_baseline.json`.
 
@@ -25,7 +31,10 @@ shasum -a 256 repro/certificate_runtime.json
 ```
 
 ## Required Checks
-1. produced file `repro/certificate_runtime.json`,
+1. produced files:
+   - `artifacts/constants_extracted.json`
+   - `artifacts/promotion_report.json`
+   - `repro/certificate_runtime.json`,
 2. compatibility bootstrap files exist:
    - `.codex_tmp/rh_closure/stitch_constants.json`
    - `.codex_tmp/rh_closure/constants_registry.json`

@@ -1,24 +1,30 @@
 {
-  "schema_version": "1.0",
   "computed_at_utc": "2026-03-05T06:04:20+00:00",
   "constants": {
-    "l_d_can": {
-      "value": 192.85454134255954,
+    "eta_coh_star_can": {
+      "notes": "Promoted by extraction pipeline; status=derived_numeric; source_section=13.53P.8.3 + 13.53N.2; raw=0.0, ref=1.0, formula=eta_coh_star_can_raw",
+      "source": "artifacts/constants_extracted.json#stitch.eta_coh_star_can",
+      "source_section": "13.53P.8.3 + 13.53N.2",
+      "status": "derived_numeric",
       "theorem_level": true,
-      "source": "RH_SELF_ADJOINTNESS_CLAMP_ATTEMPT_2026-03-04.md 13.47 + 13.53N.2",
-      "notes": "Conservative canonical tube drift constant: L_D^(can) := L_(Delta,full,*)"
+      "value": 0.0
+    },
+    "l_d_can": {
+      "notes": "Promoted by extraction pipeline; status=derived_numeric; source_section=13.47 + 13.53N.2; raw=192.85454134255954, ref=1.0, formula=l_d_can_raw",
+      "source": "artifacts/constants_extracted.json#stitch.l_d_can",
+      "source_section": "13.47 + 13.53N.2",
+      "status": "derived_numeric",
+      "theorem_level": true,
+      "value": 192.85454134255954
     },
     "sigma_star_can": {
-      "value": 0.00033437291061,
+      "notes": "Promoted by extraction pipeline; status=derived_numeric; source_section=13.47 + 13.53N.2; raw=0.00033437291061, ref=1.0, formula=sigma_star_can_raw",
+      "source": "artifacts/constants_extracted.json#stitch.sigma_star_can",
+      "source_section": "13.47 + 13.53N.2",
+      "status": "derived_numeric",
       "theorem_level": true,
-      "source": "RH_SELF_ADJOINTNESS_CLAMP_ATTEMPT_2026-03-04.md 13.47 + 13.53N.2",
-      "notes": "Design reserve on canonical tube: sigma_*^(can) := r_*"
-    },
-    "eta_coh_star_can": {
-      "value": 0.0,
-      "theorem_level": true,
-      "source": "RH_SELF_ADJOINTNESS_CLAMP_ATTEMPT_2026-03-04.md 13.53P.8.3 + 13.53N.2",
-      "notes": "Strict canonical coherence: eta_(coh,*)^(can) = 0"
+      "value": 0.00033437291061
     }
-  }
+  },
+  "schema_version": "1.0"
 }

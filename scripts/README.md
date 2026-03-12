@@ -1,14 +1,19 @@
 # Scripts
 
+- `extract_constants.py`: extract explicit RH raw/stitch constants from `artifacts/constants_extraction_inputs.json`.
+- `promote_constants.py`: promote extracted RH constants into the registry and stitch files used by the native guard.
 - `rh_closure_drift_guard.py`: canonical-lane closure gate evaluator for RH.
 - `rh_formalism_guard.py`: object-level and functor-level invariant enforcer.
 - `rh_closure_registry.py`: persistent registry manager for theorem-tagged constants.
 - `extract_rh_e3_margin.py`: E3/epistemic margin quantity calculator.
 - `rh_closure_target_calculator.py`: quantitative target threshold computer for G_M closure.
+- `update_manifest.py`: refresh SHA-256 entries in `repro/repro_manifest.json` after intentional public-pack edits.
 - `verify_manifest.py`: SHA-256 checker for `repro/repro_manifest.json`.
 
 Guard inputs:
 
+- `artifacts/constants_extraction_inputs.json`
+- `artifacts/constants_extracted.json`
 - `artifacts/constants_registry.json`
 - `artifacts/stitch_constants.json`
 

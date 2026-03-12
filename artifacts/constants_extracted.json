@@ -1,0 +1,209 @@
+{
+  "constants": {
+    "c_r": {
+      "components": {
+        "c_r_raw": 9.960035360010515
+      },
+      "formula": "c_r_raw",
+      "normalized_value": 9.960035360010515,
+      "notes": "Canonical branch theorem extraction for the response constant c_r. The extraction layer preserves the native RH drift-guard value without changing gate behavior.",
+      "raw_value": 9.960035360010515,
+      "reference": 1.0,
+      "required_nonnegative": true,
+      "required_positive": false,
+      "source_section": "13.53P.8 theorem extraction (canonical branch constants)",
+      "status": "derived_numeric",
+      "strict_zero": false,
+      "validations": {
+        "finite": true,
+        "nonnegative": true,
+        "ok": true,
+        "positive": true,
+        "strict_zero": true
+      }
+    },
+    "delta_rec": {
+      "components": {
+        "delta_rec_raw": 0.001
+      },
+      "formula": "delta_rec_raw",
+      "normalized_value": 0.001,
+      "notes": "Canonical restart-spacing constant on the theorem lane. Promoted deterministically into the registry consumed by the RH drift guard.",
+      "raw_value": 0.001,
+      "reference": 1.0,
+      "required_nonnegative": false,
+      "required_positive": true,
+      "source_section": "13.53P.8 theorem extraction (canonical branch constants)",
+      "status": "derived_numeric",
+      "strict_zero": false,
+      "validations": {
+        "finite": true,
+        "nonnegative": true,
+        "ok": true,
+        "positive": true,
+        "strict_zero": true
+      }
+    },
+    "eps_coh": {
+      "components": {
+        "eps_coh_raw": 0.0
+      },
+      "formula": "eps_coh_raw",
+      "normalized_value": 0.0,
+      "notes": "Strict canonical coherence residual. The extraction layer enforces the exact zero condition required by the RH closure guard.",
+      "raw_value": 0.0,
+      "reference": 1.0,
+      "required_nonnegative": true,
+      "required_positive": false,
+      "source_section": "13.53P.8.3 strict canonical normalization",
+      "status": "derived_numeric",
+      "strict_zero": true,
+      "validations": {
+        "finite": true,
+        "nonnegative": true,
+        "ok": true,
+        "positive": true,
+        "strict_zero": true
+      }
+    },
+    "mu_strat": {
+      "components": {
+        "mu_strat_raw": 0.9669337190736997
+      },
+      "formula": "mu_strat_raw",
+      "normalized_value": 0.9669337190736997,
+      "notes": "Canonical strategy margin on the theorem lane. This explicit raw slot replaces the earlier manual-only registry entry while preserving the native RH value.",
+      "raw_value": 0.9669337190736997,
+      "reference": 1.0,
+      "required_nonnegative": false,
+      "required_positive": true,
+      "source_section": "13.43/13.53M theorem extraction (canonical branch formulas)",
+      "status": "derived_numeric",
+      "strict_zero": false,
+      "validations": {
+        "finite": true,
+        "nonnegative": true,
+        "ok": true,
+        "positive": true,
+        "strict_zero": true
+      }
+    },
+    "rho_nf": {
+      "components": {
+        "rho_nf_raw": 0.03430793496110181
+      },
+      "formula": "rho_nf_raw",
+      "normalized_value": 0.03430793496110181,
+      "notes": "Canonical no-failure radius extracted into the standard constant pipeline and consumed unchanged by the RH drift guard.",
+      "raw_value": 0.03430793496110181,
+      "reference": 1.0,
+      "required_nonnegative": false,
+      "required_positive": true,
+      "source_section": "13.53P.8 theorem extraction (canonical branch constants)",
+      "status": "derived_numeric",
+      "strict_zero": false,
+      "validations": {
+        "finite": true,
+        "nonnegative": true,
+        "ok": true,
+        "positive": true,
+        "strict_zero": true
+      }
+    },
+    "xi_tail": {
+      "components": {
+        "xi_tail_raw": 0.01408609
+      },
+      "formula": "xi_tail_raw",
+      "normalized_value": 0.01408609,
+      "notes": "Canonical tail control parameter. The extraction manifest makes the guard input explicit and auditable without changing the RH threshold test.",
+      "raw_value": 0.01408609,
+      "reference": 1.0,
+      "required_nonnegative": true,
+      "required_positive": false,
+      "source_section": "13.43/13.53M theorem extraction (canonical branch formulas)",
+      "status": "derived_numeric",
+      "strict_zero": false,
+      "validations": {
+        "finite": true,
+        "nonnegative": true,
+        "ok": true,
+        "positive": true,
+        "strict_zero": true
+      }
+    }
+  },
+  "framework": "rh-selfadjoint-persistence-canonical-lane",
+  "generated_utc": "2026-03-12T04:15:45Z",
+  "inputs_path": "artifacts/constants_extraction_inputs.json",
+  "inputs_sha256": "baaf5157b9ea7e40ce0c5eee9b8ea4e660e0b203cbeda9f7c011e3f1deff29b4",
+  "schema_version": "2026-03-05",
+  "stitch": {
+    "eta_coh_star_can": {
+      "components": {
+        "eta_coh_star_can_raw": 0.0
+      },
+      "formula": "eta_coh_star_can_raw",
+      "normalized_value": 0.0,
+      "notes": "Strict canonical coherence stitch constant on the theorem lane.",
+      "raw_value": 0.0,
+      "reference": 1.0,
+      "required_nonnegative": true,
+      "required_positive": false,
+      "source_section": "13.53P.8.3 + 13.53N.2",
+      "status": "derived_numeric",
+      "strict_zero": true,
+      "validations": {
+        "finite": true,
+        "nonnegative": true,
+        "ok": true,
+        "positive": true,
+        "strict_zero": true
+      }
+    },
+    "l_d_can": {
+      "components": {
+        "l_d_can_raw": 192.85454134255954
+      },
+      "formula": "l_d_can_raw",
+      "normalized_value": 192.85454134255954,
+      "notes": "Canonical tube drift constant preserved through the extraction/promote path.",
+      "raw_value": 192.85454134255954,
+      "reference": 1.0,
+      "required_nonnegative": false,
+      "required_positive": true,
+      "source_section": "13.47 + 13.53N.2",
+      "status": "derived_numeric",
+      "strict_zero": false,
+      "validations": {
+        "finite": true,
+        "nonnegative": true,
+        "ok": true,
+        "positive": true,
+        "strict_zero": true
+      }
+    },
+    "sigma_star_can": {
+      "components": {
+        "sigma_star_can_raw": 0.00033437291061
+      },
+      "formula": "sigma_star_can_raw",
+      "normalized_value": 0.00033437291061,
+      "notes": "Canonical design reserve consumed by the manifold-constrained G_M closure mode.",
+      "raw_value": 0.00033437291061,
+      "reference": 1.0,
+      "required_nonnegative": false,
+      "required_positive": true,
+      "source_section": "13.47 + 13.53N.2",
+      "status": "derived_numeric",
+      "strict_zero": false,
+      "validations": {
+        "finite": true,
+        "nonnegative": true,
+        "ok": true,
+        "positive": true,
+        "strict_zero": true
+      }
+    }
+  }
+}
